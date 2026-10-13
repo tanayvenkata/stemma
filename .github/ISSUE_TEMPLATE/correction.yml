@@ -1,0 +1,25 @@
+name: Correction
+description: A note states something wrong, outdated, or unsourced.
+labels: [correction]
+body:
+  - type: input
+    id: note
+    attributes:
+      label: Note
+      description: Path or name of the note, e.g. Retrieval Pipeline/Hybrid Fusion.md
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What it says
+      description: Quote the sentence or table row.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What is wrong, and the evidence
+      description: Link a primary source (paper, specification, official docs, benchmark repository) or a reproducible measurement.
+    validations:
+      required: true

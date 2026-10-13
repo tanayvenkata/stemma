@@ -1,0 +1,23 @@
+name: New note or change of opinion
+description: Propose a new note, or argue that a recommendation should change.
+labels: [proposal]
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision it changes
+      description: What would a practitioner build, measure, or reject differently?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Primary sources, measured results with their conditions, or your own experiment.
+    validations:
+      required: true
+  - type: textarea
+    id: owner
+    attributes:
+      label: Where it belongs
+      description: The existing note that should own it, or why it needs its own note.

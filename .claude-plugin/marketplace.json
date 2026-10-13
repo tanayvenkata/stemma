@@ -1,0 +1,17 @@
+{
+  "name": "tanayv",
+  "owner": {
+    "name": "Tanay Venkata",
+    "url": "https://github.com/tanayvenkata"
+  },
+  "description": "Claude Code plugins by Tanay Venkata.",
+  "plugins": [
+    {
+      "name": "stemma",
+      "source": "./plugins/stemma",
+      "description": "Helps coding agents plan, review, and debug production RAG and search systems, backed by 123 practitioner notes.",
+      "category": "rag",
+      "tags": ["rag", "evaluation", "production", "knowledge"]
+    }
+  ]
+}

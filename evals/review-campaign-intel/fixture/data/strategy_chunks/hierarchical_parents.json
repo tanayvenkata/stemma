@@ -1,0 +1,50 @@
+[
+  {
+    "id": "parent-race-001-memo-header",
+    "race_id": "race-001",
+    "section": "Header",
+    "summary": "Race metadata and basic information.",
+    "content": "[Michigan 2022 | win | +3.2%]\nSection: Header\n\nRace metadata and basic information.",
+    "chunk_count": 1,
+    "child_ids": [
+      "race-001-memo-chunk-001"
+    ],
+    "outcome": "win",
+    "state": "Michigan",
+    "year": 2022,
+    "margin": 3.2
+  },
+  {
+    "id": "parent-race-001-memo-executive-summary",
+    "race_id": "race-001",
+    "section": "Executive Summary",
+    "summary": "Sarah Holloway won the Michigan gubernatorial race by 3.2 points by focusing on three key areas. Post-Dobbs mobilization, a shift to specific economic policies, and strong biographical contrasts proved successful, allowing Holloway to outperform expectations in suburban Detroit and maintain margins in Democratic strongholds. The campaign should prioritize these three pillars in future races.",
+    "content": "[Michigan 2022 | win | +3.2%]\nSection: Executive Summary\n\nSarah Holloway won the Michigan gubernatorial race by 3.2 points by focusing on three key areas. Post-Dobbs mobilization, a shift to specific economic policies, and strong biographical contrasts proved successful, allowing Holloway to outperform expectations in suburban Detroit and maintain margins in Democratic strongholds. The campaign should prioritize these three pillars in future races.",
+    "chunk_count": 1,
+    "child_ids": [
+      "race-001-memo-chunk-002"
+    ],
+    "outcome": "win",
+    "state": "Michigan",
+    "year": 2022,
+    "margin": 3.2
+  },
+  {
+    "id": "parent-race-001-memo-what-worked",
+    "race_id": "race-001",
+    "section": "What Worked",
+    "summary": "The Dobbs decision made abortion a key issue, with \"politicians don't belong in the exam room\" framing resonating across demographics (4.1/5 with Republican-leaning voters). Economic messaging improved significantly when focusing on specific, tangible policies like a $35 insulin cap (4.0/5) and Holloway's working-class background and role in the Flint water prosecution (4.1/5) boosted her authenticity and demonstrated a willingness to fight for working people.",
+    "content": "[Michigan 2022 | win | +3.2%]\nSection: What Worked\n\nThe Dobbs decision made abortion a key issue, with \"politicians don't belong in the exam room\" framing resonating across demographics (4.1/5 with Republican-leaning voters). Economic messaging improved significantly when focusing on specific, tangible policies like a $35 insulin cap (4.0/5) and Holloway's working-class background and role in the Flint water prosecution (4.1/5) boosted her authenticity and demonstrated a willingness to fight for working people.",
+    "chunk_count": 4,
+    "child_ids": [
+      "race-001-memo-chunk-003",
+      "race-001-memo-chunk-004",
+      "race-001-memo-chunk-005",
+      "race-001-memo-chunk-006"
+    ],
+    "outcome": "win",
+    "state": "Michigan",
+    "year": 2022,
+    "margin": 3.2
+  }
+]

@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Note links and SKILL.md references resolve
+        run: python3 scripts/check_notes.py
+      - name: Gate statistics tests
+        run: python3 scripts/test_gate_stats.py
+      - name: Plugin version, marketplace entry, and changelog agree
+        run: python3 scripts/check_release.py
+      - name: Plugin and marketplace manifests are valid
+        run: npx -y @anthropic-ai/claude-code@2.1.296 plugin validate . && npx -y @anthropic-ai/claude-code@2.1.296 plugin validate --strict plugins/stemma

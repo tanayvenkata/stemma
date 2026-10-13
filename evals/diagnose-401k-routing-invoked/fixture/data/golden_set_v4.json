@@ -1,0 +1,125 @@
+{
+  "description": "Golden Set v4 - Manually verified answers from actual documents",
+  "created": "2024-12-14",
+  "version": "4.0",
+  "evaluation_method": "llm-as-judge",
+  "tests": [
+    {
+      "id": 1,
+      "question": "When do I become vested in company contributions?",
+      "pipeline": "rag",
+      "source_reference": "SPD page 18, 'When You Vest in Company Contributions'",
+      "key_facts": [
+        "Your own contributions are immediately 100% vested",
+        "Company matching for employees hired before Dec 31 2020 is immediately vested",
+        "Company matching for employees hired after Dec 31 2020 requires 3 years",
+        "Basic company contributions require 3 years",
+        "Early vesting if you reach age 65, die, or get long-term disability"
+      ],
+      "expected_answer_summary": "Vesting depends on contribution type and hire date. Your contributions are always 100% vested. Company match is immediate for pre-2021 hires, 3-year cliff for post-2020 hires. Basic company contributions require 3 years. Exceptions for age 65, death, or disability."
+    },
+    {
+      "id": 2,
+      "question": "Does intern time count toward vesting?",
+      "pipeline": "rag",
+      "source_reference": "SPD page 10 (Eligibility), November 2023 SMM page 3",
+      "key_facts": [
+        "Interns are employees if on BNY Mellon payroll",
+        "Student interns and co-op employees are eligible to participate",
+        "Vesting clock starts on first day as intern",
+        "Prior intern service counts toward 3-year vesting requirement",
+        "5+ year gap may cause prior service not to count"
+      ],
+      "expected_answer_summary": "Yes, intern time counts toward vesting if you were classified as an employee on BNY Mellon's payroll. Your vesting clock starts on your first day as an intern. However, a break in service of 5+ consecutive years may cause prior service not to count."
+    },
+    {
+      "id": 3,
+      "question": "What investment options are available in the plan?",
+      "pipeline": "hybrid",
+      "source_reference": "Fund files in docs/funds/",
+      "key_facts": [
+        "28 investment options total",
+        "Tier 1: LifePath target-date funds (2030-2070 plus Retirement)",
+        "Tier 2: Passively managed index funds",
+        "Tier 3: Actively managed funds",
+        "Tier 4: Self-Directed Account for 8000+ mutual funds/ETFs"
+      ],
+      "expected_answer_summary": "The plan offers 28 investment options across 4 tiers: Tier 1 has LifePath target-date funds, Tier 2 has low-cost index funds, Tier 3 has actively managed funds across bonds/equity/international, and Tier 4 is a self-directed account for thousands of additional options."
+    },
+    {
+      "id": 4,
+      "question": "Which fund has the lowest expense ratio?",
+      "pipeline": "fund",
+      "source_reference": "Fund data (funds.csv)",
+      "key_facts": [
+        "BNY Common Stock has 0.0% fee (company stock)",
+        "Government Money Market has 0.002% fee (lowest regular fund)",
+        "Index funds have low expense ratios at 0.01%",
+        "Large Cap Stock Index, Aggregate Bond Index, SMID Cap Stock Index are low cost"
+      ],
+      "expected_answer_summary": "BNY Common Stock has 0.0% (company stock). For regular investment funds, Government Money Market is lowest at 0.002%. Index funds tie at 0.01%: Large Cap Stock Index, Aggregate Bond Index, SMID Cap Stock Index."
+    },
+    {
+      "id": 5,
+      "question": "What is the Self-Directed Account and what are its restrictions?",
+      "pipeline": "rag",
+      "source_reference": "SDA enrollment form and documents",
+      "key_facts": [
+        "Requires $10,000 minimum account balance to open",
+        "Minimum initial transfer of $5,000",
+        "Maximum 50% of eligible account balance",
+        "No individual stocks allowed",
+        "Only mutual funds and ETFs",
+        "No leveraged or inverse ETFs",
+        "No loans or withdrawals from SDA"
+      ],
+      "expected_answer_summary": "The SDA lets you invest in additional mutual funds and ETFs beyond core options. Requirements: $10k minimum balance, $5k initial transfer, max 50% of balance. Restrictions: no individual stocks, no leveraged/inverse ETFs, no loans or withdrawals from SDA."
+    },
+    {
+      "id": 6,
+      "question": "What is the minimum transfer amount to the Self-Directed Account?",
+      "pipeline": "rag",
+      "source_reference": "SDA documents",
+      "key_facts": [
+        "Initial transfer: $5,000",
+        "Subsequent transfers: $1,000",
+        "Must be whole dollars",
+        "Need $10,000 in account to be eligible"
+      ],
+      "expected_answer_summary": "Initial transfer minimum is $5,000. Subsequent transfers are $1,000 minimum in whole dollars. You need at least $10,000 in your 401(k) to open an SDA."
+    },
+    {
+      "id": 7,
+      "question": "What are the 2024 contribution limits and does the plan support mega backdoor Roth?",
+      "pipeline": "rag",
+      "source_reference": "SPD contribution section",
+      "key_facts": [
+        "Pre-tax plus Roth limit is $23,000",
+        "Age 50+ catch-up is $7,500",
+        "After-tax contributions up to $25,000",
+        "Total annual addition limit $69,000",
+        "Mega backdoor Roth is supported",
+        "After-tax contributions allowed",
+        "In-plan Roth conversions available",
+        "Employer match is 100% up to 7% of base pay",
+        "Match cap is $16,000 per year"
+      ],
+      "expected_answer_summary": "2024 limits: $23,000 pre-tax/Roth, $7,500 catch-up if 50+, $25,000 after-tax, $69,000 total. Yes, mega backdoor Roth is supported via after-tax contributions plus in-plan Roth conversions. Employer matches 100% up to 7% of pay, capped at $16,000/year."
+    },
+    {
+      "id": 8,
+      "question": "I'm 22 with low risk tolerance, what fund should I pick?",
+      "pipeline": "hybrid",
+      "source_reference": "General financial guidance based on plan options",
+      "key_facts": [
+        "Default would be LifePath 2065 or 2070 based on age",
+        "Low-risk options include Stable Value",
+        "Government Money Market is very low risk",
+        "Aggregate Bond Index is low-moderate risk",
+        "Long time horizon suggests growth is important",
+        "Consider blended approach"
+      ],
+      "expected_answer_summary": "The default for your age is LifePath 2065/2070 (mostly stocks). For low risk: Stable Value or Government Money Market. However, at 22 you have 40+ years, so consider a blend - mostly LifePath for growth with some Stable Value for comfort."
+    }
+  ]
+}

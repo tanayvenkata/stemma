@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "total_changes": 47,
+    "by_type": {
+      "EXPANDED": 3,
+      "RESTRUCTURED": 3,
+      "NEW_REQUIREMENT": 35,
+      "REMOVED": 6
+    },
+    "by_impact": {
+      "HIGH": 45,
+      "MEDIUM": 2,
+      "LOW": 0
+    }
+  },
+  "changes": [
+    {
+      "change_type": "EXPANDED",
+      "summary": "The scope of applicable devices and submission types has been significantly broadened to include more device characteristics, additional submission types, and devices that do not require a premarket submission.",
+      "impact": "HIGH",
+      "bm25_score": 91.1658830330782,
+      "match_type": "matched",
+      "old_section": {
+        "heading": "2. Scope",
+        "hierarchy": [
+          "2. Scope"
+        ],
+        "pages": [
+          4
+        ],
+        "preview": "2. Scope \nThis guidance provides recommendations to consider and information to include in \nFDA medical device premarket submissions for effective cybersecurity management. \nEffective cybersecurity management is intended to reduce the risk to patients by \ndecreasing the likelihood that device functi..."
+      },
+      "new_section": {
+        "heading": "II. Scope",
+        "hierarchy": [
+          "II. Scope"
+        ],
+        "pages": [
+          6,
+          7
+        ],
+        "preview": "II. Scope \nThis guidance is applicable to devices with cybersecurity considerations, including but not limited \nto devices that include a device software function1 or that contain software (including firmware) \nor programmable logic. The guidance is not limited to devices that are network-enabled or..."
+      }
+    },
+    {
+      "change_type": "EXPANDED",
+      "summary": "The new version significantly expands on the requirement for manufacturers to integrate cybersecurity into the design process, explicitly referencing specific CFR sections and detailing the need for design inputs, outputs, and acceptance criteria for security features.",
+      "impact": "HIGH",
+      "bm25_score": 79.18679343326083,
+      "match_type": "matched",
+      "old_section": {
+        "heading": "4. General Principles",
+        "hierarchy": [
+          "4. General Principles"
+        ],
+        "pages": [
+          5,
+          6
+        ],
+        "preview": "4. General Principles  \nManufacturers should develop a set of cybersecurity controls to assure medical device \ncybersecurity and maintain medical device functionality and safety.   \nFDA recognizes that medical device security is a shared responsibility between stakeholders, \nincluding health care fa..."
+      },
+      "new_section": {
+        "heading": "1. Implementation of Security Controls",
+        "hierarchy": [
+          "1. Implementation of Security Controls"
+        ],
+        "pages": [
+          25,
+          26
+        ],
+        "preview": "1. \nImplementation of Security Controls \nFDA considers the way in which a device addresses cybersecurity risks and the way in which the \ndevice responds when exposed to cybersecurity threats as functions of the device design. \nEffective cybersecurity relies upon security being \u201cbuilt in\u201d to a device..."
+      }
+    },
+    {
+      "change_type": "EXPANDED",
+      "summary": "The new version expands on the cybersecurity functions by defining specific security objectives (Authenticity, Authorization, Availability, Confidentiality, and Secure and timely updatability and patchability) that manufacturers must address in their device design, moving beyond the general 'Identify, Protect, Detect, Respond, and Recover' framework.",
+      "impact": "HIGH",
+      "bm25_score": 68.28068478438945,
+      "match_type": "matched",
+      "old_section": {
+        "heading": "5. Cybersecurity Functions",
+        "hierarchy": [
+          "5. Cybersecurity Functions"
+        ],
+        "pages": [
+          6,
+          7,
+          8
+        ],
+        "preview": "5. Cybersecurity Functions  \nThe Agency recommends that medical device manufacturers consider the following \ncybersecurity framework core functions to guide their cybersecurity activities: Identify, \nProtect, Detect, Respond, and Recover.5  \nIdentify and Protect   \nMedical devices capable of connect..."
+      },
+      "new_section": {
+        "heading": "B. Designing for Security",
+        "hierarchy": [
+          "1. A Secure Product Development Framework (SPDF) may be",
+          "B. Designing for Security"
+        ],
+        "pages": [
+          11
+        ],
+        "preview": "B. \nDesigning for Security \nWhen reviewing premarket submissions, FDA intends to assess device cybersecurity based on a \nnumber of factors, including, but not limited to, the device\u2019s ability to provide and implement the \nsecurity objectives below throughout the device architecture. The security obj..."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: I. Introduction",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "I. Introduction",
+        "hierarchy": [
+          "I. Introduction"
+        ],
+        "pages": [
+          5
+        ],
+        "preview": "..."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: III. Background",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "III. Background",
+        "hierarchy": [
+          "III. Background"
+        ],
+        "pages": [
+          7,
+          8,
+          9
+        ],
+        "preview": "III. Background  \nFDA recognizes that medical device cybersecurity is a shared responsibility among interested \nparties throughout the use environment of the medical device system, including healthcare \nfacilities, patients, healthcare providers, and manufacturers of medical devices. For the purpose..."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: IV. General Principles",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "IV. General Principles",
+        "hierarchy": [
+          "IV. General Principles"
+        ],
+        "pages": [
+          9
+        ],
+        "preview": "IV. General Principles \nThis section provides general principles for device cybersecurity relevant to device \nmanufacturers. The principles in this guidance are important to the improvement of device \ncybersecurity and, when followed, are expected to have a positive impact on the safety and \neffecti..."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: 1. A Secure Product Development Framework (SPDF) may be one way to satisfy the",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "1. A Secure Product Development Framework (SPDF) may be one way to satisfy the",
+        "hierarchy": [
+          "1. A Secure Product Development Framework (SPDF) may be one way to satisfy the"
+        ],
+        "pages": [
+          3
+        ],
+        "preview": "1. \nA Secure Product Development Framework (SPDF) may be one way to satisfy the \nQS regulation .......................................................................................................................... 6 \nB. \nDesigning for Security ......................................................."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: 1. A Secure Product Development Framework (SPDF) may be",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "1. A Secure Product Development Framework (SPDF) may be",
+        "hierarchy": [
+          "1. A Secure Product Development Framework (SPDF) may be"
+        ],
+        "pages": [
+          10,
+          11
+        ],
+        "preview": "1. \nA Secure Product Development Framework (SPDF) may be \none way to satisfy the QS regulation \nCybersecurity threats have the potential to exploit one or more vulnerabilities that could lead to \npatient harm. The greater the number of vulnerabilities that exist and/or are identified over time \nin a..."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: C. Transparency",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "C. Transparency",
+        "hierarchy": [
+          "1. A Secure Product Development Framework (SPDF) may be",
+          "C. Transparency"
+        ],
+        "pages": [
+          11,
+          12
+        ],
+        "preview": "C. \nTransparency \nA lack of cybersecurity information, such as information necessary to integrate the device into \nthe use environment, as well as information needed by users to maintain the medical device \nsystem\u2019s cybersecurity over the device lifecycle, has the potential to affect the safety and ..."
+      }
+    },
+    {
+      "change_type": "NEW_REQUIREMENT",
+      "summary": "New content: D. Submission Documentation",
+      "impact": "HIGH",
+      "bm25_score": 0.0,
+      "match_type": "new",
+      "new_section": {
+        "heading": "D. Submission Documentation",
+        "hierarchy": [
+          "1. A Secure Product Development Framework (SPDF) may be",
+          "D. Submission Documentation"
+        ],
+        "pages": [
+          12,
+          13
+        ],
+        "preview": "D. \nSubmission Documentation \nDevice cybersecurity design and documentation are expected to scale with the cybersecurity risk \nof that device. Manufacturers should take into account the larger system in which the device may \nbe used. For example, a cybersecurity risk assessment performed on a simple..."
+      }
+    }
+  ]
+}

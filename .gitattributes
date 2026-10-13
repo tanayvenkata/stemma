@@ -1,0 +1,6 @@
+# Language statistics: count the notes, not the project slices copied in as eval fixtures.
+*.md linguist-detectable
+evals/**/fixture/** linguist-vendored
+
+# Maintainer workspace, kept out of the published repository.
+workspace/ export-ignore

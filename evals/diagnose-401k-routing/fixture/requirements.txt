@@ -1,0 +1,10 @@
+# LLM & RAG
+openai>=1.0.0          # LM Studio uses OpenAI-compatible API
+sentence-transformers  # Local embeddings
+chromadb               # Vector store
+
+# PDF processing
+pypdf                  # PDF text extraction
+
+# Utilities
+python-dotenv          # Environment variables

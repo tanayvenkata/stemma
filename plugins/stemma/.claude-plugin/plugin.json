@@ -1,0 +1,23 @@
+{
+  "name": "stemma",
+  "displayName": "Stemma",
+  "version": "0.2.0",
+  "description": "Helps coding agents plan, review, and debug production RAG and search systems, backed by 123 practitioner notes.",
+  "author": {
+    "name": "Tanay Venkata",
+    "url": "https://github.com/tanayvenkata"
+  },
+  "homepage": "https://github.com/tanayvenkata/stemma",
+  "repository": "https://github.com/tanayvenkata/stemma",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "rag",
+    "retrieval",
+    "evaluation",
+    "llm-evals",
+    "search",
+    "reranking",
+    "chunking",
+    "production"
+  ]
+}

@@ -1,0 +1,20 @@
+# Core Streamlit
+streamlit>=1.29.0
+
+# Embeddings and vector search
+sentence-transformers>=2.2.0
+faiss-cpu
+numpy<2.0.0
+
+# LLM via OpenRouter
+openai>=1.0.0
+
+# Data extraction (scripts only, not needed for app)
+sec-api>=1.0.32
+
+# Export formats
+python-docx>=1.1.0
+fpdf2>=2.7.0
+
+# Environment variables
+python-dotenv>=1.0.0
