@@ -13,6 +13,8 @@ It is one skill backed by 123 practitioner notes on indexing, retrieval, generat
 
 Without a command, the skill loads on its own for tasks about parsing, chunking, embedding, retrieval, reranking, citations, RAG evaluation, or release gates.
 
+Stemma is built for coding agents such as Claude Code, where it can read your project and trace requests through the code. In a Claude chat, describe your system or attach the relevant files, and ask for a plan, review, or diagnosis.
+
 ## What it runs
 
 Stemma has no hooks, MCP servers, or network access, and it reads no credentials. Its only executable is `skills/stemma/scripts/gate_stats.py` (Python standard library), which the agent may run locally to compute confidence intervals for evaluation gates.
