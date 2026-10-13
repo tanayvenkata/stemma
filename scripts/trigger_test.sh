@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Trigger test: does the skill load for RAG questions and stay out of unrelated tasks?
 # Runs each prompt headless with the plugin loaded and records whether the Skill tool
-# was called for stemma. Rerun after any change to the SKILL.md description or name.
+# was called for the plugin's skill (stemma:stemma). Rerun after any change to the SKILL.md description or name.
 # Usage: scripts/trigger_test.sh [model] [runs per prompt]   (default: haiku 3)
 set -uo pipefail
 model="${1:-haiku}"; runs="${2:-3}"
@@ -22,7 +22,7 @@ for p in "${prompts[@]}"; do
   for _ in $(seq 1 "$runs"); do
     out="$(claude -p --plugin-dir "$plugin" --model "$model" --max-turns 3 \
       --output-format stream-json --verbose "$text" 2>/dev/null)"
-    hit=0; grep -q '"name":"Skill"[^}]*stemma' <<<"$out" && hit=1
+    hit=0; grep -q '"name":"Skill"[^}]*stemma:stemma' <<<"$out" && hit=1
     if [ "$kind" = rag ]; then rag_total=$((rag_total + 1)); rag_fired=$((rag_fired + hit))
     else other_total=$((other_total + 1)); other_fired=$((other_fired + hit)); fi
   done
