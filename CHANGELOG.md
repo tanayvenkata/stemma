@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 (2026-10-12)
+
+- `PRIVACY.md`: Stemma collects, stores, and sends no data. Linked from the plugin manifest with support and documentation links.
+
 ## 0.2.1 (2026-10-12)
 
 - Icon: a garland printed as a dot screen. *Stemma* first meant garland.

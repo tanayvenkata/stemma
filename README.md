@@ -107,7 +107,7 @@ The skill follows the open [Agent Skills](https://agentskills.io) standard, so i
 
 `SKILL.md` stays short. It states one idea (start from the simplest baseline that serves the decision, and add a mechanism only when a measurement on the real pipeline shows it earns its place), lists mistakes seen in working-looking systems, and maps each decision to the notes that own it. The agent reads only those notes. The notes avoid universal thresholds: where a number would be a guess, they give a cheap starting point as an assumption and name the measurement that confirms it.
 
-The plugin has no hooks, MCP servers, or network access. Its only executable is `scripts/gate_stats.py` (Python standard library), which the agent runs locally to compute gate statistics.
+The plugin has no hooks, MCP servers, or network access, and collects no data ([privacy](PRIVACY.md)). Its only executable is `scripts/gate_stats.py` (Python standard library), which the agent runs locally to compute gate statistics.
 
 Changes to `SKILL.md` are kept only when the eval cases show no harm. One example of why: adding a list of example triggers to the description once dropped Haiku's triggering from 12 of 12 to 0 of 12.
 
