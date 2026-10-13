@@ -43,12 +43,20 @@ CI runs these and validates the plugin and marketplace manifests.
 
 ## Releasing
 
-Changes land on `main` without changing the version. A release is a separate step: `plugins/stemma/.claude-plugin/plugin.json` holds the only version number, installed copies update only when it changes, and the Claude directory follows the `release` branch, so nothing on `main` reaches users until it is promoted.
+`main` is the only long-lived branch, and it should always be installable: the Claude Code marketplace and `npx skills add` read it directly. Changes arrive by pull request, each adding a line under `## Unreleased` in `CHANGELOG.md`. A release is a tagged commit on `main`; `plugins/stemma/.claude-plugin/plugin.json` holds the only version number, and installed copies update only when it changes.
 
 1. **Stage.** On the commit to release, check the plugin exactly as it will ship: `scripts/trigger_test.sh haiku 1` (it loads the plugin from this repository with `--plugin-dir`), then try `/stemma plan <something>` in `claude --plugin-dir plugins/stemma`.
-2. **Bump.** Raise `version` in `plugin.json` (patch for fixes, minor for new notes or commands, major for changes that break how the skill is invoked), add a matching `## X.Y.Z (YYYY-MM-DD)` entry at the top of `CHANGELOG.md`, run the checks above, and commit to `main`.
+2. **Bump.** Raise `version` in `plugin.json` (patch for fixes, minor for new notes or commands, major for changes that break how the skill is invoked). Rename `## Unreleased` in `CHANGELOG.md` to `## X.Y.Z (YYYY-MM-DD)` and start a new empty `## Unreleased` above it. Run the checks above and merge to `main`.
 3. **Tag.** `claude plugin tag plugins/stemma --push` creates and pushes `stemma--vX.Y.Z`.
-4. **Promote.** `git push origin stemma--vX.Y.Z^{commit}:release`. The directory scans the new commit on `release`, and an Anthropic reviewer publishes it.
+4. **Release.** Publish a GitHub Release for the tag with that version's changelog section as notes, and attach a zip of the plugin folder for manual installs and for uploading to claude.ai:
+
+   ```bash
+   (cd plugins && zip -qr ../stemma-plugin.zip stemma)
+   awk '/^## X.Y.Z/{f=1;next} /^## /{f=0} f' CHANGELOG.md > notes.md
+   gh release create stemma--vX.Y.Z stemma-plugin.zip --title "Stemma X.Y.Z" --notes-file notes.md
+   ```
+
+The Claude directory scans each new commit on `main` as a version, and an Anthropic reviewer publishes it.
 
 ## Code of conduct
 
