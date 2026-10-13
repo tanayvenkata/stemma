@@ -15,7 +15,7 @@ Start with [[Standard & Modular RAG]] unless requirements already rule it out. T
 | Retrieval timing | retrieve once | Should retrieval be skipped, repeated, or triggered mid-generation? |
 | Evidence topology | independent passages | Do relationships, hierarchy, time, or corpus-wide themes matter? |
 | Source composition | one corpus | Must the system route across search, SQL, APIs, graphs, or distinct corpora? |
-| Correction | pass retrieved evidence forward | Should weak evidence trigger filtering, abstention, or another source? |
+| Correction | forward the retrieved evidence | Should weak evidence trigger filtering, abstention, or another source? |
 | Execution | one planned path | Does the next evidence request depend on an intermediate result? |
 | Parallelism | one context and answer path | Would diverse evidence subsets and drafts improve the quality/latency frontier? |
 

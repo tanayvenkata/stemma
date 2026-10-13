@@ -10,7 +10,7 @@ Inference parameters shape the runtime distribution, effort, length, and stoppin
 | Control | Effect to verify |
 |---|---|
 | temperature | flattens or sharpens token sampling distribution |
-| top-$p$ / top-$k$ | restricts sampling to a probability mass or candidate set |
+| top-p / top-k | restricts sampling to a probability mass or candidate set |
 | maximum output | bounds generation but can truncate schemas or citations |
 | stop sequences | terminate on matched text and can fire inside valid content |
 | penalties/biases | alter token preferences and can damage factual strings |

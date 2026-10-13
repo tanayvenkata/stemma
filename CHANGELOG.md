@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 (2026-10-12)
+
+- Icon: a garland printed as a dot screen. *Stemma* first meant garland.
+- A README in the plugin folder, which the Claude directory shows on the listing.
+- Two phrases reworded that the directory's scanner read as credential handling ("pass retrieved evidence" and the top-p math notation). No guidance changed.
+
 ## 0.2.0 (2026-10-12)
 
 - Renamed from `rag-field-guide` to Stemma. Install with `claude plugin install stemma@tanayv` and invoke with `/stemma plan …`.
