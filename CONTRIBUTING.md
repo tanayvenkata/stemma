@@ -43,11 +43,12 @@ CI runs these and validates the plugin and marketplace manifests.
 
 ## Releasing
 
-`plugins/stemma/.claude-plugin/plugin.json` holds the only version number, and installed copies update only when it changes. Changes can land on `main` between releases; users receive them at the next release.
+Changes land on `main` without changing the version. A release is a separate step: `plugins/stemma/.claude-plugin/plugin.json` holds the only version number, installed copies update only when it changes, and the Claude directory follows the `release` branch, so nothing on `main` reaches users until it is promoted.
 
-1. Bump `version` in `plugin.json` (patch for fixes, minor for new notes or commands, major for changes that break how the skill is invoked).
-2. Add a matching `## X.Y.Z (YYYY-MM-DD)` entry at the top of `CHANGELOG.md`.
-3. Run the checks above, commit, then tag and push: `claude plugin tag plugins/stemma --push`.
+1. **Stage.** On the commit to release, check the plugin exactly as it will ship: `scripts/trigger_test.sh haiku 1` (it loads the plugin from this repository with `--plugin-dir`), then try `/stemma plan <something>` in `claude --plugin-dir plugins/stemma`.
+2. **Bump.** Raise `version` in `plugin.json` (patch for fixes, minor for new notes or commands, major for changes that break how the skill is invoked), add a matching `## X.Y.Z (YYYY-MM-DD)` entry at the top of `CHANGELOG.md`, run the checks above, and commit to `main`.
+3. **Tag.** `claude plugin tag plugins/stemma --push` creates and pushes `stemma--vX.Y.Z`.
+4. **Promote.** `git push origin stemma--vX.Y.Z^{commit}:release`. The directory scans the new commit on `release`, and an Anthropic reviewer publishes it.
 
 ## Code of conduct
 
